@@ -1,0 +1,303 @@
+/* ============================================
+   Waybar Style - Hyprland Blue Theme
+   Black background, white borders, rounded blocks
+   BLUE TEXT throughout
+   ============================================ */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Z003, Font-Awesome,";
+    font-size: 15px;
+    min-height: 0;
+}
+
+/* Main waybar window */
+window#waybar {
+    background-color: #000000;
+    color: #7DD3FC;
+    border-bottom: 2px solid #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* All modules - rounded blocks */
+#workspaces,
+#clock,
+#custom-weather,
+#network,
+#backlight,
+#pulseaudio,
+#cpu,
+#memory,
+#storage,
+#battery,
+#custom-launcher,
+#custom-notification
+#tray,
+#custom-power,
+#power {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 2px 4px;
+}
+
+/* Hover effect */
+#workspaces button:hover,
+#custom-launcher:hover,
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#custom-power:hover {
+    background-color: #000000;
+    border-color: #7DD3FC;
+}
+
+/* Workspace buttons */
+#workspaces button {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 0 8px;
+    margin: 2px 3px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: #000000;
+    border-color: #7DD3FC;
+    color: #7DD3FC;
+}
+
+#workspaces button.active {
+    background-color: #7DD3FC;
+    color: #0a0a0a;
+    border-color: #7DD3FC;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ef5350;
+}
+
+/* Launcher - Blue background, BLACK text */
+#custom-launcher {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#custom-launcher:hover {
+    background-color: #5DB8E8;
+}
+
+/* Clock - BLUE text */
+#clock {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+/* Weather - BLUE text */
+#custom-weather {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Network - BLUE text */
+#network {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* PulseAudio - BLUE text */
+#pulseaudio {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    background-color: #000000;
+    color: #ef5350;
+}
+
+/* Music Player - BLUE text */
+#custom-player {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+#custom-player:hover {
+    background-color: #000000;
+    border-color: #7DD3FC;
+}
+
+#custom-player.playing {
+    border-color: #7DD3FC;
+    box-shadow: 0 0 5px rgba(125, 211, 252, 0.3);
+}
+
+/* Battery - BLUE text */
+#battery {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#battery.charging {
+    color: #66BB6A;
+}
+
+#battery.critical {
+    background-color: #000000;
+    color: #ef5350;
+    border-color: #ef5350;
+}
+
+/* CPU - BLUE text */
+#cpu {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Memory - BLUE text */
+#memory {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Storage - BLUE text */
+#storage {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Backlight - BLUE text */
+#custom-backlight {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Tray */
+#tray {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 2px 4px;
+}
+
+/* Power button - VISIBLE with RED color */
+#custom-power,
+#power {
+    background-color: #000000;
+    color: #ef5350;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#custom-power:hover,
+#power:hover {
+    background-color: #000000;
+    border-color: #ef5350;
+}
+
+/* Tooltip styling */
+tooltip {
+    background-color: #000000;
+    border: 1px solid #7DD3FC;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #7DD3FC;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+}
+
+/* Calendar tooltip */
+#calendar {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #7DD3FC;
+    border-radius: 8px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+}
+
+#calendar.today {
+    background-color: #7DD3FC;
+    color: #000000;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-weight: bold;
+}
+
+/* Music Player Tooltip */
+#custom-player tooltip {
+    background-color: #0a0a0a;
+    border: 1px solid #7DD3FC;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#custom-player tooltip label {
+    color: #7DD3FC;
+    font-family: "Z003, Font-Awesome,", monospace;
+    font-size: 13px;
+}
+
+/* Custom-notification - BLUE text */
+#custom-notification {
+    background-color: #000000;
+    color: #7DD3FC;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 0 8px;
+}

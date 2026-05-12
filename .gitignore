@@ -1,0 +1,12 @@
+# Wallpapers (keep repo lightweight)
+*.jpg
+*.png
+*.jpeg
+*.webp
+
+# API keys & private configs
+/etc/eww_weather
+/etc/waybar_weather
+*.pyc
+__pycache__/
+.DS_Store

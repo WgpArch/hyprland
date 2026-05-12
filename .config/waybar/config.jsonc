@@ -1,0 +1,244 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "margin": "0 0 0 0",
+  "width": 1350,
+  "modules-left": [
+  "custom/launcher",
+  "hyprland/workspaces",
+  "tray"
+  ],
+  "modules-center": ["clock", "custom/weather"],
+  "modules-right": [
+       "custom/player",
+       "backlight",
+       "pulseaudio",
+       "cpu",
+       "battery",
+       "custom/notification",
+       "memory",
+       "storage",
+       "custom/power"
+  ],
+
+
+   "hyprland/workspaces": {
+       "active-only": false,
+       "all-outputs": false,
+       "disable-scroll": false,
+       "on-scroll-up": "hyprctl dispatch workspace e-1",
+       "on-scroll-down": "hyprctl dispatch workspace e+1",
+       "format": "{icon}",
+       "on-click": "activate",
+       "format-icons": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10",
+                "11": "11",
+                //"urgent": "",
+                //"active": "",
+                //"default": ""
+               },
+         "persistent-workspaces": {
+         "*": 11,
+         "LVDS-1": 11
+    }
+  },
+
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "rofi -show drun -theme ~/.config/waybar/blue.rasi",
+        "tooltip": true,
+        "tooltip-format": "btw 😎"
+  },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 300,
+        "exec": "~/.config/waybar/scripts/weather.py",
+        "return-type": "json"
+  },
+
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "<big>{:%b %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%b %d %H:%M:%S %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "week-pos": "right",
+        "on-scroll": 1,
+        "format": {
+        "months":     "<span><b>{}</b></span>",
+        "days":       "<span><b>{}</b></span>",
+        "weeks":      "<span><b>W{}</b></span>",
+        "weekdays":   "<span><b>{}</b></span>",
+        "today":      "<span><b><u>{}</u></b></span>"
+            }
+    },
+        "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "tz_up",
+        "on-scroll-down": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+        }
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰌘",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌘",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+        "max-length": 30,
+        "format-icons": [
+        "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
+    ],
+        "on-click": "nm-connection-editor"
+  },
+
+    "network#speed": {
+       "interval": 1,
+       "format": "{ifname}",
+       "format-wifi": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+       "format-ethernet": "󰌘  {bandwidthUpBytes}  {bandwidthDownBytes}",
+       "format-disconnected": "󰌙",
+       "tooltip-format": "{ipaddr}",
+       "format-linked": "󰈁 {ifname} (No IP)",
+       "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+       "tooltip-format-ethernet": "{ifname} 󰌘",
+       "tooltip-format-disconnected": "󰌙 Disconnected",
+       "min-length": 24,
+       "max-length": 24,
+       "format-icons": [
+       "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
+    ]
+  },
+
+    "cpu": {
+        "format": "  {}%",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "$LXTERMINAL -e btop"
+  },
+
+    "memory": {
+        "format": "  {}%",
+        "return-type": "json",
+        "interval": 5
+  },
+
+    "storage": {
+        "format": " 󰋊 {percentage_used}%",
+        "tooltip-format": "{used} | {total}",
+        "interval": 5
+  },
+
+    "custom/backlight": {
+        "device": "acpi_video1",
+        "format": "{icon} {percent: >1}%",
+        "format-icons": [" ", " "],
+        "on-scroll-down": "light -A 5",
+        "on-scroll-up": "light -U 5"
+  },
+
+    "battery": {
+        "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+        },
+        "on-click-middle": "xfce-terminal acpi -i",
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+        "notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+      },
+
+
+
+   "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+   "custom/player": {
+       "format": "🎵 {}",
+       "exec": "~/.config/waybar/scripts/player.sh",
+       "interval": 3,
+       "max-length": 25,
+       "tooltip": true,
+       "return-type": "text"
+    },
+
+   "power-profiles-daemon": {
+       "format": "{icon}",
+       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+       "tooltip": true,
+       "format-icons": {
+       "default": "",
+       "performance": "",
+       "balanced": "",
+       "power-saver": ""
+}
+    },
+
+   "custom/power": {
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/rofi-power-menu.sh",
+        "on-click-right": "killall rofi",
+        "format": "⏻ "
+    }
+}
