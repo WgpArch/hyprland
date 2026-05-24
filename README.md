@@ -31,3 +31,5 @@ Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
 │           ── weather.py     # OpenWeatherMap widget
 ├── .gitignore                 # Excludes wallpapers & API keys
 └── README.md
+
+## 📸 Screenshot
