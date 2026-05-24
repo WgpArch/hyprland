@@ -33,3 +33,5 @@ Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
 └── README.md
 
 ## 📸 Screenshot
+
+## 📸 Screenshots
