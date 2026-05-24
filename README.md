@@ -4,7 +4,7 @@ Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
 
 ## 📁 Structure
 ~/.dotfiles/hyprland/
-├── .config/
+├── configs/
 │   ├── hypr/
 │   │   └── hyprland.conf      # Main Hyprland config
 │   ── waybar/
