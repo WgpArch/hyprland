@@ -1,37 +1,25 @@
+# Hyprland Dotfiles
+
 <div align="center">
 
-  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
-  <img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
-  <img src="https://img.shields.io/badge/Hyprland-58E1FF?style=for-the-badge&logo=hyprland&logoColor=white" alt="Hyprland">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](https://wgparch.github.io/hyprland/)
 
-  <br><br>
+<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
+<img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
+<img src="https://img.shields.io/badge/Hyprland-58E1FF?style=for-the-badge&logo=hyprland&logoColor=white" alt="Hyprland">
+<img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
 
-  Tiling Wayland Compositor with Eye-Candy on Arch Linux.
+<br><br>
+
+Tiling Wayland Compositor with Eye-Candy on Arch Linux.
 
 </div>
 
 ---
 
+## 📖 Documentation & Installation
 
-# Hyprland Config for Arch Linux
-
-Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
-
-## 📁 Structure
-~/.dotfiles/hyprland/
-├── configs/
-│   ├── hypr/
-│   │   └── hyprland.conf      # Main Hyprland config
-│   ── waybar/
-│       ├── config.jsonc       # Waybar layout & modules
-│       ├── style1.css         # Waybar theme
-│       └── scripts/
-│           ├── player.sh      # MPRIS player widget
-│           ── weather.py     # OpenWeatherMap widget
-├── .gitignore                 # Excludes wallpapers & API keys
-└── README.md
-
+For full installation instructions, keybinds, waybar configuration, and theming details, please visit the **[Official Documentation Website](https://wgparch.github.io/hyprland/)**.
 
 ## 📸 Screenshots
 
@@ -40,4 +28,3 @@ Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
 ![Screenshot 3](2026-05-24_19-54-43.jpg)
 ![Screenshot 4](2026-05-24_19-54-49.jpg)
 ![Screenshot 5](2026-05-24_19-54-55.jpg)
-![Screenshot 6](2026-05-24_21-01-13.jpg)
