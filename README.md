@@ -32,6 +32,12 @@ Personal Hyprland WM configuration with Waybar (top bar) and system scripts.
 ├── .gitignore                 # Excludes wallpapers & API keys
 └── README.md
 
-## 📸 Screenshot
 
 ## 📸 Screenshots
+
+![Screenshot 1](2026-05-24_19-54-26.jpg)
+![Screenshot 2](2026-05-24_19-54-32.jpg)
+![Screenshot 3](2026-05-24_19-54-43.jpg)
+![Screenshot 4](2026-05-24_19-54-49.jpg)
+![Screenshot 5](2026-05-24_19-54-55.jpg)
+![Screenshot 6](2026-05-24_21-01-13.jpg)
